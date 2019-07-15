@@ -22,6 +22,7 @@ func failExit(message string) {
 	os.Exit(111)
 }
 
+// Execute root command implementation
 func Execute() {
 	dir, child := parseArgs(os.Args)
 	if exitCode, err := internal.EnvDir(dir, child); err != nil {
